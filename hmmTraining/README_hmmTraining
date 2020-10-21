@@ -1,0 +1,26 @@
+##############################
+#                            #
+# README FOR hmmTraining.pl  #
+#                            #
+##############################
+
+DESCRIPTION: hmmTraining.pl is a tool to create a trained HMM database
+
+REQUIRED SOFTWARE:
+	- PERL
+	- MUSCLE
+	- HMMER
+
+REQUIRED FILES:
+	- the cluster files (unaligned FASTA format with extension .fa or .fasta) must be in the folder (names: cl1.fa, cl2.fa, ...) 
+
+SYNOPSIS:
+	hmmTraineval.pl cl1.fa cl2.fa ... 
+
+
+OPTIONS:
+	--help outputs this help message
+	--lic outputs the WARRANTY
+
+OUTPUT:
+	- trained HMM database (trained_hmmdb)

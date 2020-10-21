@@ -1,0 +1,34 @@
+#########################################
+#                                       #
+# README FOR hmmClassify.pl             #
+#                                       #
+#########################################
+
+DESCRIPTION: hmmClassify.pl is a tool to classify influenza A HA-gene sequences based on hidden markov profiles
+	     There are different options (HMM profile database)
+		
+REQUIRED SOFTWARE:
+	- PERL
+	- HMMER
+
+
+SYNOPSIS:
+
+hmmClassify.pl --in input.fa --out output
+
+	input.fa is an unaligned sequence file in FASTA format
+	output is the name one can choose for the output file
+
+
+OPTIONS:
+
+    	--help  output this help message
+    	--db	specifying the hmm database to use (by default the program uses the file hmmClassifydb_new)
+	--lic	outputs the WARRANTY
+	                       
+                 
+OUTPUT:	
+	text file with two rows per input sequence: 
+	- sequence name; length of the sequence, highest score, predicted model (tab-delimited) if a match was found
+	- sequence name; "No Hit against one of the models." if no match was found
+	- sequence name; "Sequence si to short for classification.", if the input sequence is to short. 
